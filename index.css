@@ -9,9 +9,10 @@ html, body{
     height: 100%;
     background-color: black;
     color: white;
+    font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#main{
+#home{
     width: 100%;
     height: 100vh;
     background-image: url();
@@ -19,17 +20,30 @@ html, body{
     background-position: center;
 }
 
-.logo{
+.logo {
     display: flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2rem;
-}
-.container .a{
-    color: red;
-}
+    background: linear-gradient(45deg,  #ff0000, #b400ff, #ff0000, #6b00ff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
 .container{
-    padding: 20px 8%;
-
+    padding: 25px 7%;
 }
 
 nav{
@@ -41,12 +55,12 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 30px;
 }
 nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
 }
 nav ul li a::after{
@@ -61,4 +75,66 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+
+.home-text{
+    margin-top: 18%;
+    font-size: 45px;
+   line-height: 58px;
+}
+.home-text h1{
+    font-size: 70px;
+    margin-top: 20px;
+}
+.home-text p{
+    font-size: 47px;
+}
+.home-text h1 span{
+    background: linear-gradient(45deg, #ff0707, #5600ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.inner-headings {
+    border: 0px solid #ddd;
+    height: 50px;
+    line-height: 48px;
+    font-size: 45px;
+    display: inline-block;  
+    overflow: hidden;
+    margin: -48px 30px;
+    display: flex;
+}
+
+.inner-headings span{
+    position: relative;
+    color: rgb(175 99 255);
+    animation:  animation 7s ease infinite;
+}
+
+@keyframes animation{
+    0%,
+    100% {
+        top: 0;
+    }
+    20%{
+        top: 0;
+    }
+    25%{
+        top: -50px;
+    }
+    45%{
+        top: -50px;
+    }
+    50%{
+        top: -100px;
+    }
+    70%{
+        top: -100px;
+    }
+    75%{
+        top: -150px;
+    }
+    95%{
+        top: -150px;
+    }
 }
